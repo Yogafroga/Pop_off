@@ -1,0 +1,128 @@
+/* ---------------------------
+   CSS VARIABLES (Custom Props)
+---------------------------- */
+:root {
+  --primary: #4a90e2;
+  --padding: 1rem;
+  --box-size: calc(80px + 1vw);
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fafafa;
+  line-height: 1.6;
+}
+
+header, section {
+  padding: var(--padding);
+  max-width: 900px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: var(--primary);
+}
+
+/* ---------------------------
+   FLEXBOX DEMO
+---------------------------- */
+.flex-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.box {
+  background: #dfe9f3;
+  padding: 1rem;
+  flex: 1;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* ---------------------------
+   GRID DEMO
+---------------------------- */
+.grid-container {
+  display: grid;
+  margin-top: 1rem;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.grid-item {
+  background: #f7d9e3;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* ---------------------------
+   TRANSITIONS DEMO
+---------------------------- */
+.transition-btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.transition-btn:hover {
+  transform: scale(1.1);
+  background: #357abd;
+}
+
+/* ---------------------------
+   VARIABLES + calc() DEMO
+---------------------------- */
+.variable-box {
+  background: #e8ffe3;
+  padding: calc(var(--padding) * 2);
+  width: var(--box-size);
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* ---------------------------
+   ACCESSIBILITY DEMO
+---------------------------- */
+.a11y-btn {
+  background: black;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+}
+
+.a11y-btn:focus {
+  outline: 3px solid yellow;
+}
+
+/* ---------------------------
+   RESPONSIVE DESIGN
+---------------------------- */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: #222;
+  color: white;
+  margin-top: 2rem;
+}
